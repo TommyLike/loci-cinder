@@ -8,6 +8,8 @@ ARG PROJECT_REF=master
 ARG SCRIPTS_REPO=https://github.com/openstack/loci
 ARG SCRIPTS_REF=master
 ARG OVERRIDE=override
+ARG UBUNTU_MIRROR
+RUN /bin/bash -c 'if [[ -n ${UBUNTU_MIRROR} ]]; then sed -i 's#http://archive.ubuntu.com#${UBUNTU_MIRROR}#g' /etc/apt/sources.list; fi'
 
 ADD $OVERRIDE /
 
