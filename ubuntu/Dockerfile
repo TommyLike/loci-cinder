@@ -3,7 +3,7 @@ FROM ubuntu:xenial
 ENV PATH=/var/lib/openstack/bin:$PATH
 ENV PROJECT=cinder
 ARG WHEELS=openstackloci/requirements:ubuntu
-ARG PROJECT_REPO=https://git.openstack.org/openstack/${PROJECT}
+ARG PROJECT_REPO=http://git.trystack.cn/openstack/${PROJECT}
 ARG PROJECT_REF=master
 ARG SCRIPTS_REPO=https://github.com/TommyLike/loci
 ARG SCRIPTS_REF=master
