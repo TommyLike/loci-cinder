@@ -11,7 +11,7 @@ ARG OVERRIDE=override
 # Ubuntu mirror
 ENV UBUNTU_MIRROR=http://mirrors.aliyun.com
 # Pypi mirror
-ENV PYPI_MIRROR=http://mirrors.aliyun.com/pypi/simple
+ENV PYPI_MIRROR=https://pypi.douban.com/simple
 ADD $OVERRIDE /
 
 RUN /bin/bash -c 'if [[ -n ${UBUNTU_MIRROR} ]]; then sed -i 's#http://archive.ubuntu.com#${UBUNTU_MIRROR}#g' /etc/apt/sources.list; fi'
