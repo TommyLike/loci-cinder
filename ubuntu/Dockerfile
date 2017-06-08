@@ -21,6 +21,7 @@ RUN cat /etc/pip.conf
 RUN set -x \
     && apt-get update \
     && apt-get dist-upgrade -y \
+    && apt-get install netbase -y \
     && apt-get install -y --no-install-recommends git \
         ca-certificates \
         libxml2 \
