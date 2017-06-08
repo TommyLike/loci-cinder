@@ -9,9 +9,9 @@ ARG SCRIPTS_REPO=https://github.com/openstack/loci
 ARG SCRIPTS_REF=master
 ARG OVERRIDE=override
 # Ubuntu mirror
-ENV UBUNTU_MIRROR=http://mirrors.aliyun.com
+ENV UBUNTU_MIRROR=
 # Pypi mirror
-ENV PYPI_MIRROR=http://mirrors.aliyun.com/pypi/simple
+ENV PYPI_MIRROR=
 ADD $OVERRIDE /
 
 RUN /bin/bash -c 'if [[ -n ${UBUNTU_MIRROR} ]]; then sed -i 's#http://archive.ubuntu.com#${UBUNTU_MIRROR}#g' /etc/apt/sources.list; fi'
